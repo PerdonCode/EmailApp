@@ -73,4 +73,19 @@ public class Email {
     public String getPassword() {
         return password;
     }
+
+    @Override
+    public String toString() {
+        return "Email{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", defaultPasswordLength=" + defaultPasswordLength +
+                ", department='" + department + '\'' +
+                ", mailboxCapacity=" + mailboxCapacity +
+                ", alternateEmail='" + alternateEmail + '\'' +
+                ", companySuffix='" + companySuffix + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
