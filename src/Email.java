@@ -66,4 +66,11 @@ public class Email {
         return mailboxCapacity;
     }
 
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
