@@ -7,7 +7,7 @@ public class Email {
     private int defaultPasswordLength = 12;
     private String department;
     private int mailboxCapacity;
-    private String alternative;
+    private String alternateEmail;
     private String companySuffix = "PerdonCode.com";
 
     private String email;
@@ -48,6 +48,22 @@ public class Email {
          password[i] = passwordSet.charAt(randomValue);
       }
        return new String(password);
+    }
+
+    public void setMailboxCapacity(int mailboxCapacity) {
+        this.mailboxCapacity = mailboxCapacity;
+    }
+
+    public void setAlternateEmail(String alternateEmail) {
+        this.alternateEmail = alternateEmail;
+    }
+
+    public void changePassword(String password){
+        this.password = password;
+    }
+
+    public int getMailboxCapacity() {
+        return mailboxCapacity;
     }
 
 }
