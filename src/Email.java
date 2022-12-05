@@ -8,6 +8,9 @@ public class Email {
     private String department;
     private int mailboxCapacity;
     private String alternative;
+    private String companySuffix = "PerdonCode.com";
+
+    private String email;
 
 
     public Email(String firstName, String lastName) {
@@ -17,6 +20,7 @@ public class Email {
         // call method asking for department - return department
     this.department = setDepartment();
     this.password = randomPassword(defaultPasswordLength);
+    this.email = firstName.toLowerCase() +  "." + lastName.toLowerCase() + "-" + department + "@" + companySuffix;
     }
 
     // call method asking for department - return department
@@ -36,9 +40,6 @@ public class Email {
         }
     }
 
-    // Ask department
-
-    // generate random password
     private String randomPassword(int length){
       String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!$@%#^&*";
       char[] password = new char[length];
@@ -49,9 +50,4 @@ public class Email {
        return new String(password);
     }
 
-    // set mailbox capacity
-
-    // set alternate email
-
-    // Change password
 }
